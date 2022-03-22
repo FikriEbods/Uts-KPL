@@ -25,6 +25,9 @@ class EmployeeFactory extends Factory
             'hire_date' => $this->faker->date($format = 'Y-m-d', $max = 'now'),
             'group_id' => rand(1,4),
             'address' => $this->faker->address(),
+            'allowance' => rand(100000, 1000000),
+            'salary_cut' => rand(100000, 1000000),
+            'total_salary' => rand(100000, 1000000),
             'created_at' => now(),
             'updated_at' => now(),
         ];

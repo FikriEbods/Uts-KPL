@@ -18,11 +18,14 @@ return new class extends Migration
             $table->integer('nik');
             $table->string('name');
             $table->foreignId('gender_id');
+            $table->text('address');
             $table->string('email');
-            $table->integer('phone_number');
+            $table->string('phone_number');
             $table->date('hire_date');
             $table->foreignId('group_id');
-            $table->text('address');
+            $table->integer('allowance');
+            $table->integer('salary_cut');
+            $table->integer('total_salary');
             $table->timestamps();
         });
     }

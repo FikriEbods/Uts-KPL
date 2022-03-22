@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Employee extends Model
 {
     use HasFactory;
-    
+
     protected $fillable = [
         'nik',
         'name',
@@ -18,7 +18,20 @@ class Employee extends Model
         'hire_date',
         'group_id',
         'address',
+        'allowance',
+        'salary_cut',
+        'total_salary',
         'created_at',
         'updated_at',
     ];
+
+    public function gender()
+    {
+        return $this->belongsTo(Gender::class);
+    }
+
+    public function group()
+    {
+        return $this->belongsTo(Group::class);
+    }
 }
